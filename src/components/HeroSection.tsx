@@ -54,13 +54,11 @@ const HeroSection = () => {
       className="relative min-h-screen flex items-center overflow-hidden"
     >
       {/* Spline background */}
-      <div className="hero-spline absolute inset-0 opacity-0">
+      <div className="hero-spline absolute inset-0 opacity-0 overflow-hidden">
         <iframe
           src="https://my.spline.design/orb-L1XqjDs57GUGvfhEVLMSqGF5/"
           frameBorder="0"
-          width="100%"
-          height="100%"
-          className="absolute inset-0"
+          className="absolute w-[110vw] h-[110vh] -top-[5vh] -left-[5vw]"
           style={{ pointerEvents: "none" }}
           title="3D Background"
         />
