@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback } from "react";
-import Lenis from "@studio-freight/lenis";
+import Lenis from "lenis";
 import Preloader from "@/components/Preloader";
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
@@ -20,8 +20,9 @@ const Index = () => {
     if (!loaded) return;
 
     const lenis = new Lenis({
-      duration: 1.2,
-      easing: (t: number) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      lerp: 0.05,
+      smoothWheel: true,
+      wheelMultiplier: 0.9,
     });
 
     function raf(time: number) {
