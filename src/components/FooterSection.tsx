@@ -50,7 +50,7 @@ const FooterSection = () => {
 
           <p className="text-sm text-muted-foreground">
             © 2026, Made with{" "}
-            <span className="text-primary">♥</span> by Milad
+            <span className="text-primary">♥</span> by Aryan Gupta
           </p>
         </div>
       </div>

@@ -61,7 +61,7 @@ const AboutSection = () => {
             <div className="relative group">
               <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary/30 via-secondary/20 to-accent/20 blur-2xl scale-110 group-hover:scale-125 transition-transform duration-700" />
               <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-2 border-primary/20 glow-box group-hover:scale-105 group-hover:rotate-2 transition-all duration-500">
-                <img src={profileImg} alt="Milad" className="w-full h-full object-cover object-top" />
+                <img src={profileImg} alt="Aryan Gupta" className="w-full h-full object-cover object-top" />
               </div>
             </div>
           </div>
@@ -70,7 +70,7 @@ const AboutSection = () => {
           <div className="about-content">
             <span className="text-primary text-sm tracking-[0.3em] uppercase mb-4 block">About Me</span>
             <h2 className="section-heading !text-4xl md:!text-5xl mb-6">
-              Hi There, I'm <span className="gradient-text">Milad</span>
+              Hi There, I'm <span className="gradient-text">Aryan Gupta</span>
             </h2>
             <p className="section-subtext mb-8">
               I specialize in frontend development, crafting dynamic, visually
