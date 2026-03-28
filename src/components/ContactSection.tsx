@@ -66,6 +66,9 @@ const ContactSection = () => {
           <p className="section-subtext mx-auto mt-4">
             Have a project in mind or just want to say hello? Drop me a message.
           </p>
+          <p className="text-xs text-muted-foreground mt-3">
+            📍 Bhubaneswar, Odisha &nbsp;•&nbsp; 📞 +91 96682 27755
+          </p>
         </div>
 
         <form onSubmit={handleSubmit} className="contact-form space-y-5">

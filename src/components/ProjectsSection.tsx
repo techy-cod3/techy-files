@@ -12,12 +12,12 @@ import project6 from "@/assets/project-6.png";
 gsap.registerPlugin(ScrollTrigger);
 
 const projects = [
-  { img: project1, title: "3D Interactive Web", desc: "A stunning 3D landing page with Spline integration and React.", tags: ["React", "Spline", "GSAP"] },
-  { img: project2, title: "Gaming UI Platform", desc: "Next-level gaming dashboard with immersive 3D character selection.", tags: ["React", "Three.js", "Tailwind"] },
-  { img: project3, title: "3D Portfolio", desc: "A creative developer portfolio with glassmorphic design and 3D elements.", tags: ["HTML", "CSS", "JavaScript"] },
-  { img: project4, title: "Gaming Website", desc: "Vibrant gaming website with anime-inspired design and animations.", tags: ["React", "GSAP", "Tailwind"] },
-  { img: project5, title: "Animation Showcase", desc: "Portfolio featuring advanced web animations and Spline 3D models.", tags: ["React", "Spline", "GSAP"] },
-  { img: project6, title: "Animated Portfolio", desc: "Step-by-step animated portfolio with smooth parallax scrolling.", tags: ["CSS", "JS", "GSAP"] },
+  { img: project1, title: "Help Sync", desc: "Disaster Management & Rescue app with full-stack architecture, built with React, TypeScript, Supabase, and Cloud.", tags: ["React", "TypeScript", "Supabase"], link: "https://github.com" },
+  { img: project2, title: "Marketing Dashboard", desc: "Analytics dashboard tracking product growth and stats, built during team leadership at Comfort Zone.", tags: ["Analytics", "Management", "Growth"] },
+  { img: project3, title: "Cloud Infrastructure", desc: "AWS cloud deployment and networking project showcasing infrastructure management skills.", tags: ["AWS", "Cloud", "Networking"] },
+  { img: project4, title: "Database Management", desc: "DBMS project demonstrating SQL proficiency and data management capabilities.", tags: ["SQL", "DBMS", "Data"] },
+  { img: project5, title: "Salesforce Admin", desc: "Salesforce administration project from GFG certification, covering CRM configuration and automation.", tags: ["Salesforce", "CRM", "Admin"] },
+  { img: project6, title: "Data Science Analysis", desc: "Data science project from TATA certification covering analytics and visualization techniques.", tags: ["Python", "Data Science", "Analytics"] },
 ];
 
 const ProjectsSection = () => {
