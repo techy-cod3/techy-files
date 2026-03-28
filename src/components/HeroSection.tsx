@@ -74,7 +74,7 @@ const HeroSection = () => {
       <div className="container mx-auto px-6 relative z-10 pt-24">
         <div className="max-w-3xl">
           <span className="hero-tag inline-block text-primary text-sm tracking-[0.3em] uppercase mb-6 opacity-0">
-            ✦ Web Developer
+            ✦ Tech Enthusiast &amp; Developer
           </span>
 
           <h1 className="hero-heading section-heading !text-5xl md:!text-7xl lg:!text-8xl mb-6 opacity-0">
@@ -83,10 +83,10 @@ const HeroSection = () => {
           </h1>
 
           <p className="hero-sub section-subtext mb-10 opacity-0">
-            I deliver robust, production-ready websites and web apps with speed
-            and precision. Every project is backed by clean code, clear
-            communication, and a commitment to getting it done, on time, every
-            time.
+            Tech enthusiast with strong problem-solving skills and a passion for
+            building innovative solutions. Experienced in cloud, networking, and
+            full-stack development with proven leadership and management
+            abilities.
           </p>
 
           <div className="hero-cta flex gap-4 opacity-0">

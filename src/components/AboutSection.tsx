@@ -5,13 +5,22 @@ import profileImg from "@/assets/profile.png";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const skills = [
-  { name: "HTML5", icon: "🌐" },
-  { name: "CSS3", icon: "🎨" },
-  { name: "JavaScript", icon: "⚡" },
+const technicalSkills = [
+  { name: "Cloud AWS", icon: "☁️" },
+  { name: "Networking", icon: "🌐" },
+  { name: "DBMS", icon: "🗄️" },
+  { name: "SQL", icon: "📊" },
+  { name: "OS", icon: "💻" },
   { name: "React", icon: "⚛️" },
-  { name: "GSAP", icon: "🎬" },
   { name: "TypeScript", icon: "📘" },
+];
+
+const softSkills = [
+  { name: "Leadership", icon: "👑" },
+  { name: "Management", icon: "📋" },
+  { name: "Problem Solving", icon: "🧩" },
+  { name: "Teamwork", icon: "🤝" },
+  { name: "Adaptation", icon: "🔄" },
 ];
 
 const AboutSection = () => {
@@ -72,18 +81,33 @@ const AboutSection = () => {
             <h2 className="section-heading !text-4xl md:!text-5xl mb-6">
               Hi There, I'm <span className="gradient-text">Aryan Gupta</span>
             </h2>
-            <p className="section-subtext mb-8">
-              I specialize in frontend development, crafting dynamic, visually
-              engaging, and highly responsive websites that provide seamless user
-              experiences. With a strong foundation in HTML, CSS, and JavaScript,
-              I focus on building modern web interfaces that are not only
-              aesthetically appealing but also optimized for performance and
-              accessibility.
+            <p className="section-subtext mb-6">
+              Tech enthusiast pursuing BCA at ASBM University (2027), with
+              certifications in Data Science from TATA, Management &amp; Leadership
+              from Coursera, and Salesforce Administration from GFG. Experienced
+              team leader who achieved 89% growth in product marketing at Comfort
+              Zone, Bhubaneswar.
+            </p>
+            <p className="text-xs text-muted-foreground mb-8">
+              📍 Bhubaneswar, Odisha &nbsp;•&nbsp; 📞 +91 96682 27755
             </p>
 
-            <h3 className="text-sm tracking-[0.2em] uppercase text-muted-foreground mb-4">Tech Stack</h3>
-            <div className="skills-grid grid grid-cols-3 sm:grid-cols-6 gap-4">
-              {skills.map((skill) => (
+            <h3 className="text-sm tracking-[0.2em] uppercase text-muted-foreground mb-4">Technical Skills</h3>
+            <div className="skills-grid grid grid-cols-3 sm:grid-cols-4 gap-4 mb-6">
+              {technicalSkills.map((skill) => (
+                <div
+                  key={skill.name}
+                  className="skill-icon glass-card p-3 flex flex-col items-center gap-2 hover:glow-border transition-all duration-300 cursor-default"
+                >
+                  <span className="text-2xl">{skill.icon}</span>
+                  <span className="text-xs text-muted-foreground">{skill.name}</span>
+                </div>
+              ))}
+            </div>
+
+            <h3 className="text-sm tracking-[0.2em] uppercase text-muted-foreground mb-4">Soft Skills</h3>
+            <div className="skills-grid grid grid-cols-3 sm:grid-cols-5 gap-4">
+              {softSkills.map((skill) => (
                 <div
                   key={skill.name}
                   className="skill-icon glass-card p-3 flex flex-col items-center gap-2 hover:glow-border transition-all duration-300 cursor-default"
