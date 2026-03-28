@@ -105,7 +105,7 @@ const ContactSection = () => {
 
         <div className="social-icons flex justify-center gap-6 mt-12">
           <a
-            href="https://github.com"
+            href="https://github.com/techy-cod3/"
             target="_blank"
             rel="noopener noreferrer"
             className="social-icon glass-card p-4 hover:glow-border transition-all duration-300 group"
