@@ -1,3 +1,3 @@
-# Welcome to your Lovable project
+# Aryan Gupta's Portfolio
 
 TODO: Document your project here
