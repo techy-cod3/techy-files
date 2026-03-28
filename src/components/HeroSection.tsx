@@ -74,7 +74,7 @@ const HeroSection = () => {
       <div className="container mx-auto px-6 relative z-10 pt-24">
         <div className="max-w-3xl">
           <span className="hero-tag inline-block text-primary text-sm tracking-[0.3em] uppercase mb-6 opacity-0">
-            ✦ Tech Enthusiast &amp; Developer
+            ✦ Cloud/DevOps
           </span>
 
           <h1 className="hero-heading section-heading !text-5xl md:!text-7xl lg:!text-8xl mb-6 opacity-0">

@@ -67,7 +67,7 @@ const Preloader = ({ onComplete }: PreloaderProps) => {
           <span className="gradient-text">Aryan Gupta</span>
         </h1>
         <p className="text-muted-foreground text-sm tracking-[0.3em] uppercase">
-          Tech Enthusiast &amp; Developer
+          Cloud/DevOps
         </p>
 
         {/* Progress bar */}
