@@ -79,7 +79,7 @@ const HeroSection = () => {
 
           <h1 className="hero-heading section-heading !text-5xl md:!text-7xl lg:!text-8xl mb-6 opacity-0">
             Hi, I'm{" "}
-            <span className="gradient-text">Milad</span>
+            <span className="gradient-text">Aryan Gupta</span>
           </h1>
 
           <p className="hero-sub section-subtext mb-10 opacity-0">

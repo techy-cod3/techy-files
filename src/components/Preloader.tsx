@@ -64,7 +64,7 @@ const Preloader = ({ onComplete }: PreloaderProps) => {
 
       <div className="preloader-content relative z-10 flex flex-col items-center gap-8">
         <h1 className="text-5xl md:text-7xl font-bold tracking-tighter">
-          <span className="gradient-text">Milad</span>
+          <span className="gradient-text">Aryan Gupta</span>
         </h1>
         <p className="text-muted-foreground text-sm tracking-[0.3em] uppercase">
           Web Developer

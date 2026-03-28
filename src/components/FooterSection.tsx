@@ -34,7 +34,7 @@ const FooterSection = () => {
 
       <div className="footer-content container mx-auto px-6">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-          <span className="text-xl font-bold glow-text text-primary">MC</span>
+          <span className="text-xl font-bold glow-text text-primary">AG</span>
 
           <div className="flex gap-6">
             {["#home", "#about", "#projects", "#contact"].map((href) => (
@@ -50,7 +50,7 @@ const FooterSection = () => {
 
           <p className="text-sm text-muted-foreground">
             © 2026, Made with{" "}
-            <span className="text-primary">♥</span> by Milad
+            <span className="text-primary">♥</span> by Aryan Gupta
           </p>
         </div>
       </div>

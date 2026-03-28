@@ -43,7 +43,7 @@ const Navbar = () => {
       >
         <div className="container mx-auto px-6 py-4 flex items-center justify-between">
           <a href="#home" className="text-xl font-bold tracking-tight glow-text text-primary">
-            MC
+            AG
           </a>
 
           {/* Desktop nav */}
