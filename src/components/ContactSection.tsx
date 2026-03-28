@@ -115,7 +115,7 @@ const ContactSection = () => {
             </svg>
           </a>
           <a
-            href="https://linkedin.com"
+            href="https://www.linkedin.com/in/aryan-gupta-boi"
             target="_blank"
             rel="noopener noreferrer"
             className="social-icon glass-card p-4 hover:glow-border transition-all duration-300 group"
