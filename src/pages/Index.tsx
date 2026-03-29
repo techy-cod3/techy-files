@@ -8,7 +8,7 @@ import CertificatesSection from "@/components/CertificatesSection";
 import ProjectsSection from "@/components/ProjectsSection";
 import ContactSection from "@/components/ContactSection";
 import FooterSection from "@/components/FooterSection";
-
+import CustomCursor from "@/components/CustomCursor";
 const Index = () => {
   const [loaded, setLoaded] = useState(false);
 
@@ -40,6 +40,7 @@ const Index = () => {
       <div
         className={`transition-opacity duration-1000 ${loaded ? "opacity-100" : "opacity-0"}`}
       >
+        <CustomCursor />
         <Navbar />
         <HeroSection />
         <AboutSection />

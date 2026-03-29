@@ -1,6 +1,7 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { GitHubCalendar } from "react-github-calendar";
 import profileImg from "@/assets/profile.webp";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -57,6 +58,15 @@ const AboutSection = () => {
         {
           opacity: 1, scale: 1, y: 0, stagger: 0.1, duration: 0.5, ease: "back.out(1.7)",
           scrollTrigger: { trigger: ".skills-grid", start: "top 85%" },
+        }
+      );
+
+      gsap.fromTo(
+        ".github-calendar-container",
+        { opacity: 0, y: 30 },
+        {
+          opacity: 1, y: 0, duration: 0.8, ease: "power2.out",
+          scrollTrigger: { trigger: ".github-calendar-container", start: "top 85%" },
         }
       );
     }, sectionRef);
@@ -122,6 +132,29 @@ const AboutSection = () => {
                 </div>
               ))}
             </div>
+
+            {/* GitHub Calendar */}
+            <div className="mt-12 github-calendar-container opacity-0">
+              <h3 className="text-sm tracking-[0.2em] uppercase text-muted-foreground mb-6">GitHub Contributions</h3>
+              <div className="glass-card p-6 flex justify-center hover:glow-border transition-all duration-300 w-full overflow-hidden">
+                <div className="w-full max-w-full overflow-x-auto pb-2 scrollbar-hide">
+                  <div className="min-w-[700px]">
+                    <GitHubCalendar 
+                      username="techy-cod3" 
+                      colorScheme="dark"
+                      theme={{
+                        light: ['hsl(0, 0%, 92%)', 'hsl(var(--primary) / 0.2)', 'hsl(var(--primary) / 0.5)', 'hsl(var(--primary) / 0.8)', 'hsl(var(--primary))'],
+                        dark: ['hsl(0, 0%, 10%)', 'hsl(var(--primary) / 0.2)', 'hsl(var(--primary) / 0.5)', 'hsl(var(--primary) / 0.8)', 'hsl(var(--primary))'],
+                      }}
+                      fontSize={12}
+                      blockSize={11}
+                      blockMargin={4}
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            
           </div>
         </div>
       </div>

@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import gsap from "gsap";
-import { X } from "lucide-react";
+import { X, Moon, Sun } from "lucide-react";
+import { useTheme } from "next-themes";
 
 const navItems = [
   { label: "Home", href: "#home" },
@@ -12,8 +13,12 @@ const navItems = [
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [activeSection, setActiveSection] = useState("");
+  const { theme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
+    setMounted(true);
     const onScroll = () => setScrolled(window.scrollY > 50);
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
@@ -28,6 +33,27 @@ const Navbar = () => {
       );
     }
   }, [isOpen]);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setActiveSection(`#${entry.target.id}`);
+        }
+      });
+    }, { threshold: 0.5 });
+
+    // Use a small timeout to let the DOM render before selecting sections
+    const timeoutId = setTimeout(() => {
+      const sections = document.querySelectorAll("section[id]");
+      sections.forEach((section) => observer.observe(section));
+    }, 500);
+
+    return () => {
+      clearTimeout(timeoutId);
+      observer.disconnect();
+    }
+  }, []);
 
   const handleNavClick = (href: string) => {
     setIsOpen(false);
@@ -53,11 +79,21 @@ const Navbar = () => {
               <button
                 key={item.label}
                 onClick={() => handleNavClick(item.href)}
-                className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300 tracking-wide"
+                className={`text-sm transition-colors duration-300 tracking-wide ${activeSection === item.href || (activeSection === "" && item.href === "#home") ? "text-primary font-semibold drop-shadow-[0_0_8px_hsl(var(--primary))]" : "text-muted-foreground hover:text-foreground"}`}
               >
                 {item.label}
               </button>
             ))}
+            
+            {mounted && (
+              <button
+                onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+                className="p-2 rounded-full hover:bg-muted transition-colors text-foreground"
+                aria-label="Toggle Theme"
+              >
+                {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
+              </button>
+            )}
             <button
               onClick={() => handleNavClick("#contact")}
               className="btn-glow text-sm !px-6 !py-2"
@@ -93,11 +129,21 @@ const Navbar = () => {
           <X size={32} />
         </button>
 
+        {mounted && (
+          <button
+            onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+            className="absolute top-6 left-6 p-2 text-foreground hover:text-primary transition-colors md:hidden"
+            aria-label="Toggle Theme"
+          >
+            {theme === 'dark' ? <Sun size={28} /> : <Moon size={28} />}
+          </button>
+        )}
+
         {navItems.map((item) => (
           <button
             key={item.label}
             onClick={() => handleNavClick(item.href)}
-            className="mobile-nav-item text-3xl font-light text-foreground hover:text-primary transition-colors"
+            className={`mobile-nav-item text-3xl font-light transition-colors ${activeSection === item.href || (activeSection === "" && item.href === "#home") ? "text-primary font-semibold drop-shadow-[0_0_12px_hsl(var(--primary))]" : "text-foreground hover:text-primary"}`}
           >
             {item.label}
           </button>
