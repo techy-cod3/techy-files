@@ -89,7 +89,7 @@ const HeroSection = () => {
 
           <div className="hero-cta flex gap-4 opacity-0">
             <button
-              onClick={() => document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" })}
+              onClick={() => window.open("https://wa.me/919668227755?text=Hello%20Aryan,%20I%20am%20interested%20in%20hiring%20you%20for%20a%20project!", "_blank")}
               className="btn-glow"
             >
               Hire Me
