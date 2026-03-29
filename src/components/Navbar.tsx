@@ -95,7 +95,7 @@ const Navbar = () => {
               </button>
             )}
             <button
-              onClick={() => window.open("https://wa.me/919668227755?text=Hello%20Aryan,%20I%20am%20interested%20in%20hiring%20you%20for%20a%20project!", "_blank")}
+              onClick={() => window.open("https://wa.me/919668227755?text=Hello%20Aryan,%20I%20am%20interested%20in%20hiring%20you%20for%20a%20Role%20or%20Projects", "_blank")}
               className="btn-glow text-sm !px-6 !py-2"
             >
               Hire Me
@@ -151,7 +151,7 @@ const Navbar = () => {
         <button
           onClick={() => {
             setIsOpen(false);
-            window.open("https://wa.me/919668227755?text=Hello%20Aryan,%20I%20am%20interested%20in%20hiring%20you%20for%20a%20project!", "_blank");
+            window.open("https://wa.me/919668227755?text=Hello%20Aryan,%20I%20am%20interested%20in%20hiring%20you%20for%20a%20Role%20or%20Projects", "_blank");
           }}
           className="mobile-nav-item btn-glow mt-4"
         >
