@@ -41,9 +41,32 @@ const ContactSection = () => {
     return () => ctx.revert();
   }, []);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
+    const formData = new FormData(e.currentTarget);
+    const name = formData.get("name") as string;
+    const email = formData.get("email") as string;
+    const subject = formData.get("subject") as string;
+    const message = formData.get("message") as string;
+
+    const whatsappText = `Hello Aryan, I am reaching out from your portfolio.
+
+*Name:* ${name}
+*Email:* ${email}
+*Subject:* ${subject || "No Subject"}
+
+*Message:*
+${message}`;
+
+    const encodedText = encodeURIComponent(whatsappText);
+    const whatsappUrl = `https://wa.me/919668227755?text=${encodedText}`;
+
+    window.open(whatsappUrl, "_blank");
+
     setSubmitted(true);
+    e.currentTarget.reset();
+
     gsap.fromTo(
       ".submit-btn",
       { scale: 1 },
@@ -74,22 +97,26 @@ const ContactSection = () => {
         <form onSubmit={handleSubmit} className="contact-form space-y-5">
           <input
             type="text"
+            name="name"
             placeholder="Your Name"
             required
             className="contact-input glass-input w-full"
           />
           <input
             type="email"
+            name="email"
             placeholder="Your Email"
             required
             className="contact-input glass-input w-full"
           />
           <input
             type="text"
+            name="subject"
             placeholder="Subject"
             className="contact-input glass-input w-full"
           />
           <textarea
+            name="message"
             placeholder="Your Message"
             rows={5}
             required
