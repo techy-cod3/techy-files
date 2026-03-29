@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import gsap from "gsap";
+import { X } from "lucide-react";
 
 const navItems = [
   { label: "Home", href: "#home" },
@@ -67,13 +68,13 @@ const Navbar = () => {
 
           {/* Hamburger */}
           <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden flex flex-col gap-1.5 z-[60]"
+            onClick={() => setIsOpen(true)}
+            className={`md:hidden flex flex-col gap-1.5 z-[60] transition-opacity duration-300 ${isOpen ? "opacity-0 pointer-events-none" : "opacity-100"}`}
             aria-label="Menu"
           >
-            <span className={`block w-6 h-0.5 bg-foreground transition-all duration-300 ${isOpen ? "rotate-45 translate-y-2" : ""}`} />
-            <span className={`block w-6 h-0.5 bg-foreground transition-all duration-300 ${isOpen ? "opacity-0" : ""}`} />
-            <span className={`block w-6 h-0.5 bg-foreground transition-all duration-300 ${isOpen ? "-rotate-45 -translate-y-2" : ""}`} />
+            <span className="block w-6 h-0.5 bg-foreground rounded-full" />
+            <span className="block w-6 h-0.5 bg-foreground rounded-full" />
+            <span className="block w-6 h-0.5 bg-foreground rounded-full" />
           </button>
         </div>
       </nav>
@@ -84,6 +85,14 @@ const Navbar = () => {
           isOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
         }`}
       >
+        <button
+          onClick={() => setIsOpen(false)}
+          className="absolute top-6 right-6 p-2 text-foreground hover:text-primary transition-colors md:hidden"
+          aria-label="Close menu"
+        >
+          <X size={32} />
+        </button>
+
         {navItems.map((item) => (
           <button
             key={item.label}
