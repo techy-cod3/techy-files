@@ -13,6 +13,11 @@ const technicalSkills = [
   { name: "OS", icon: "💻" },
   { name: "React", icon: "⚛️" },
   { name: "TypeScript", icon: "📘" },
+  { name: "Python", icon: "🐍" },
+  { name: "Kubernetes", icon: "☸️" },
+  { name: "Docker", icon: "🐳" },
+  { name: "CI/CD", icon: "🔄" },
+  { name: "Node.js", icon: "🟢" },
 ];
 
 const softSkills = [
