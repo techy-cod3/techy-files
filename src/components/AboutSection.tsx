@@ -96,12 +96,8 @@ const AboutSection = () => {
             <h2 className="section-heading !text-4xl md:!text-5xl mb-6">
               Hi There, I'm <span className="gradient-text">Aryan Gupta</span>
             </h2>
-            <p className="section-subtext mb-6">
-              Tech enthusiast pursuing BCA at ASBM University (2027), with
-              certifications in Data Science from TATA, Management &amp; Leadership
-              from Coursera, and Salesforce Administration from GFG. Experienced
-              team leader who achieved 89% growth in product marketing at Comfort
-              Zone, Bhubaneswar.
+            <p className="section-subtext mb-6 text-justify">
+              I'm Aryan Gupta, a passionate Cloud &amp; DevOps Engineering enthusiast based in Bhubaneswar. Currently pursuing my BCA at ASBM University (2027), I blend a strong foundation in modern infrastructure—like AWS, Docker, Kubernetes, and CI/CD—with an eye for highly polished user experiences. Having previously spearheaded product marketing at Comfort Zone to an 89% growth rate, I know how to combine technical execution with strategic vision. Whether I'm architecting a scalable cloud network or deploying robust backend pipelines, my focus is always on creating elite, high-performing solutions.
             </p>
             <p className="text-xs text-muted-foreground mb-8">
               📍 Bhubaneswar, Odisha &nbsp;•&nbsp; 📞 +91 96682 27755
