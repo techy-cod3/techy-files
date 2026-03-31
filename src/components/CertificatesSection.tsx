@@ -59,13 +59,13 @@ const CertificatesSection = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} id="certificates" className="relative py-32 overflow-hidden">
+    <section ref={sectionRef} id="certificates" className="relative py-20 sm:py-32 overflow-hidden">
       <div className="floating-orb w-72 h-72 -left-36 bottom-20" style={{ background: "radial-gradient(circle, hsl(195 100% 50% / 0.12), transparent 70%)" }} />
 
-      <div className="container mx-auto px-6">
+      <div className="container mx-auto px-4 sm:px-6">
         <div className="cert-heading text-center mb-16">
           <span className="text-primary text-sm tracking-[0.3em] uppercase mb-4 block">Achievements</span>
-          <h2 className="section-heading !text-4xl md:!text-5xl">
+          <h2 className="section-heading !text-3xl sm:!text-4xl md:!text-5xl">
             My <span className="gradient-text">Certifications</span>
           </h2>
           <p className="section-subtext max-w-2xl mx-auto mt-4">

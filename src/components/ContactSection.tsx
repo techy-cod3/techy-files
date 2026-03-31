@@ -76,11 +76,11 @@ ${message}`;
   };
 
   return (
-    <section ref={sectionRef} id="contact" className="relative py-32 overflow-hidden">
+    <section ref={sectionRef} id="contact" className="relative py-20 sm:py-32 overflow-hidden">
       <div className="floating-orb w-72 h-72 right-0 top-20" />
       <div className="floating-orb w-56 h-56 -left-28 bottom-20" style={{ background: "radial-gradient(circle, hsl(280 80% 55% / 0.15), transparent 70%)" }} />
 
-      <div className="container mx-auto px-6 max-w-2xl">
+      <div className="container mx-auto px-4 sm:px-6 max-w-2xl">
         <div className="contact-heading text-center mb-16">
           <span className="text-primary text-sm tracking-[0.3em] uppercase mb-4 block">Get In Touch</span>
           <h2 className="section-heading">

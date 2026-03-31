@@ -68,7 +68,7 @@ const Navbar = () => {
           scrolled ? "bg-background/80 backdrop-blur-xl border-b border-border" : ""
         }`}
       >
-        <div className="container mx-auto px-6 py-4 flex items-center justify-between">
+        <div className="container mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
           <a href="#home" className="flex items-center gap-2">
             <img src="/logo.png" alt="Aryan Gupta Logo" className="h-10 w-10 rounded-xl shadow-[0_0_15px_rgba(99,102,241,0.5)]" />
           </a>

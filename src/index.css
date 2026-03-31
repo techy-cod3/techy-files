@@ -165,11 +165,11 @@
   }
 
   .section-heading {
-    @apply text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight;
+    @apply text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight;
   }
 
   .section-subtext {
-    @apply text-muted-foreground text-lg leading-relaxed max-w-2xl;
+    @apply text-muted-foreground text-base sm:text-lg leading-relaxed max-w-2xl;
   }
 }
 
@@ -186,4 +186,18 @@
 }
 ::-webkit-scrollbar-thumb:hover {
   background: hsl(var(--primary) / 0.5);
+}
+
+/* Hide scrollbar utility */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Prevent horizontal overflow on mobile */
+html, body {
+  overflow-x: hidden;
 }

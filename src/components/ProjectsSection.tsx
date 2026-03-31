@@ -49,10 +49,10 @@ const ProjectsSection = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} id="projects" className="relative py-32 overflow-hidden">
+    <section ref={sectionRef} id="projects" className="relative py-20 sm:py-32 overflow-hidden">
       <div className="floating-orb w-96 h-96 -left-48 bottom-0 animate-pulse-glow" />
 
-      <div className="container mx-auto px-6">
+      <div className="container mx-auto px-4 sm:px-6">
         <div className="projects-heading text-center mb-16">
           <span className="text-primary text-sm tracking-[0.3em] uppercase mb-4 block">Portfolio</span>
           <h2 className="section-heading">
@@ -63,13 +63,12 @@ const ProjectsSection = () => {
         {/* Desktop: horizontal scroll area */}
         <div
           ref={scrollRef}
-          className="projects-grid flex gap-6 overflow-x-auto pb-6 snap-x snap-mandatory md:grid md:grid-cols-2 lg:grid-cols-3 md:overflow-visible md:pb-0"
-          style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+          className="projects-grid flex gap-4 sm:gap-6 overflow-x-auto pb-6 snap-x snap-mandatory scrollbar-hide md:grid md:grid-cols-2 lg:grid-cols-3 md:overflow-visible md:pb-0"
         >
           {projects.map((project, i) => (
             <div
               key={i}
-              className="project-card glass-card min-w-[300px] md:min-w-0 snap-center group cursor-pointer overflow-hidden hover:glow-border transition-all duration-500 hover:-translate-y-2"
+              className="project-card glass-card min-w-[260px] sm:min-w-[300px] md:min-w-0 snap-center group cursor-pointer overflow-hidden hover:glow-border transition-all duration-500 hover:-translate-y-2"
             >
               <div className="relative overflow-hidden aspect-video">
                 <img
@@ -79,7 +78,7 @@ const ProjectsSection = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-card via-transparent to-transparent" />
               </div>
-              <div className="p-6">
+              <div className="p-4 sm:p-6">
                 <h3 className="text-lg font-semibold mb-2 text-foreground">{project.title}</h3>
                 <p className="text-sm text-muted-foreground mb-4 line-clamp-2">{project.desc}</p>
                 <div className="flex gap-2 flex-wrap">

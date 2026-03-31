@@ -75,16 +75,16 @@ const AboutSection = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} id="about" className="relative py-32 overflow-hidden">
+    <section ref={sectionRef} id="about" className="relative py-20 sm:py-32 overflow-hidden">
       <div className="floating-orb w-80 h-80 -right-40 top-20" style={{ background: "radial-gradient(circle, hsl(260 80% 60% / 0.15), transparent 70%)" }} />
 
-      <div className="container mx-auto px-6">
-        <div className="grid md:grid-cols-2 gap-16 items-center">
+      <div className="container mx-auto px-4 sm:px-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center">
           {/* Image */}
           <div className="about-image flex justify-center">
             <div className="relative group">
               <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary/30 via-secondary/20 to-accent/20 blur-2xl scale-110 group-hover:scale-125 transition-transform duration-700" />
-              <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-2 border-primary/20 glow-box group-hover:scale-105 group-hover:rotate-2 transition-all duration-500">
+              <div className="relative w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-2 border-primary/20 glow-box group-hover:scale-105 group-hover:rotate-2 transition-all duration-500">
                 <img src={profileImg} alt="Aryan Gupta" className="w-full h-full object-cover object-top" />
               </div>
             </div>
@@ -93,10 +93,10 @@ const AboutSection = () => {
           {/* Content */}
           <div className="about-content">
             <span className="text-primary text-sm tracking-[0.3em] uppercase mb-4 block">About Me</span>
-            <h2 className="section-heading !text-4xl md:!text-5xl mb-6">
+            <h2 className="section-heading !text-3xl sm:!text-4xl md:!text-5xl mb-6">
               Hi There, I'm <span className="gradient-text">Aryan Gupta</span>
             </h2>
-            <p className="section-subtext mb-6 text-justify">
+            <p className="section-subtext mb-6 text-justify text-sm sm:text-base">
               I'm Aryan Gupta, a passionate Cloud &amp; DevOps Engineering enthusiast based in Bhubaneswar. Currently pursuing my BCA at ASBM University (2027), I blend a strong foundation in modern infrastructure—like AWS, Docker, Kubernetes, and CI/CD—with an eye for highly polished user experiences. Having previously spearheaded product marketing at Comfort Zone to an 89% growth rate, I know how to combine technical execution with strategic vision. Whether I'm architecting a scalable cloud network or deploying robust backend pipelines, my focus is always on creating elite, high-performing solutions.
             </p>
             <p className="text-xs text-muted-foreground mb-8">
@@ -104,7 +104,7 @@ const AboutSection = () => {
             </p>
 
             <h3 className="text-sm tracking-[0.2em] uppercase text-muted-foreground mb-4">Technical Skills</h3>
-            <div className="skills-grid grid grid-cols-3 sm:grid-cols-4 gap-4 mb-6">
+            <div className="skills-grid grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 sm:gap-4 mb-6">
               {technicalSkills.map((skill) => (
                 <div
                   key={skill.name}
@@ -117,7 +117,7 @@ const AboutSection = () => {
             </div>
 
             <h3 className="text-sm tracking-[0.2em] uppercase text-muted-foreground mb-4">Soft Skills</h3>
-            <div className="skills-grid grid grid-cols-3 sm:grid-cols-5 gap-4">
+            <div className="skills-grid grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3 sm:gap-4">
               {softSkills.map((skill) => (
                 <div
                   key={skill.name}
@@ -132,7 +132,7 @@ const AboutSection = () => {
             {/* GitHub Calendar */}
             <div className="mt-12 github-calendar-container opacity-0">
               <h3 className="text-sm tracking-[0.2em] uppercase text-muted-foreground mb-6">GitHub Contributions</h3>
-              <div className="glass-card p-6 flex justify-center hover:glow-border transition-all duration-300 w-full overflow-hidden">
+              <div className="glass-card p-4 sm:p-6 flex justify-center hover:glow-border transition-all duration-300 w-full overflow-hidden">
                 <div className="w-full max-w-full overflow-x-auto pb-2 scrollbar-hide">
                   <div className="min-w-[700px]">
                     <GitHubCalendar 
@@ -142,9 +142,9 @@ const AboutSection = () => {
                         light: ['hsl(0, 0%, 92%)', 'hsl(var(--primary) / 0.2)', 'hsl(var(--primary) / 0.5)', 'hsl(var(--primary) / 0.8)', 'hsl(var(--primary))'],
                         dark: ['hsl(0, 0%, 10%)', 'hsl(var(--primary) / 0.2)', 'hsl(var(--primary) / 0.5)', 'hsl(var(--primary) / 0.8)', 'hsl(var(--primary))'],
                       }}
-                      fontSize={12}
-                      blockSize={11}
-                      blockMargin={4}
+                      fontSize={10}
+                      blockSize={9}
+                      blockMargin={3}
                     />
                   </div>
                 </div>

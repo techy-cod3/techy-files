@@ -51,7 +51,7 @@ const HeroSection = () => {
     <section
       ref={sectionRef}
       id="home"
-      className="relative min-h-screen flex items-center overflow-hidden"
+      className="relative min-h-screen flex items-center overflow-hidden px-0"
     >
       {/* Spline background */}
       <div className="hero-spline absolute inset-0 opacity-0 overflow-hidden">
@@ -69,13 +69,13 @@ const HeroSection = () => {
       <div className="hero-orb-2 floating-orb w-96 h-96 bottom-0 right-0" style={{ background: "radial-gradient(circle, hsl(260 80% 60% / 0.2), transparent 70%)" }} />
       <div className="hero-orb-3 floating-orb w-48 h-48 top-1/3 right-1/4" style={{ background: "radial-gradient(circle, hsl(280 80% 55% / 0.15), transparent 70%)" }} />
 
-      <div className="container mx-auto px-6 relative z-10 pt-24">
+      <div className="container mx-auto px-4 sm:px-6 relative z-10 pt-24">
         <div className="max-w-3xl">
           <span className="hero-tag inline-block text-primary text-sm tracking-[0.3em] uppercase mb-6 opacity-0">
             ✦ Cloud/DevOps
           </span>
 
-          <h1 className="hero-heading section-heading !text-5xl md:!text-7xl lg:!text-8xl mb-6 opacity-0">
+          <h1 className="hero-heading section-heading !text-4xl sm:!text-5xl md:!text-7xl lg:!text-8xl mb-6 opacity-0">
             Hi, I'm{" "}
             <span className="gradient-text">Aryan Gupta</span>
           </h1>
@@ -87,7 +87,7 @@ const HeroSection = () => {
             abilities.
           </p>
 
-          <div className="hero-cta flex gap-4 opacity-0">
+          <div className="hero-cta flex flex-col sm:flex-row gap-4 opacity-0">
             <button
               onClick={() => window.open("https://wa.me/919668227755?text=Hello%20Aryan,%20I%20am%20interested%20in%20hiring%20you%20for%20a%20Role%20or%20Projects", "_blank")}
               className="btn-glow"

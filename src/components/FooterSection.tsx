@@ -32,11 +32,11 @@ const FooterSection = () => {
       <div className="floating-orb w-32 h-32 left-1/4 top-0 opacity-30" />
       <div className="floating-orb w-24 h-24 right-1/3 bottom-0 opacity-20" style={{ background: "radial-gradient(circle, hsl(260 80% 60% / 0.3), transparent 70%)" }} />
 
-      <div className="footer-content container mx-auto px-6">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+      <div className="footer-content container mx-auto px-4 sm:px-6">
+        <div className="flex flex-col items-center justify-between gap-6 md:flex-row">
           <img src="/logo.png" alt="Aryan Gupta Logo" className="h-10 w-10 rounded-xl" />
 
-          <div className="flex gap-6">
+          <div className="flex gap-4 sm:gap-6 flex-wrap justify-center">
             {["#home", "#about", "#projects", "#contact"].map((href) => (
               <button
                 key={href}
