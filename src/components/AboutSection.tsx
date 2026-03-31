@@ -36,9 +36,9 @@ const AboutSection = () => {
     const ctx = gsap.context(() => {
       gsap.fromTo(
         ".about-content",
-        { opacity: 0, filter: "blur(8px)", y: 40 },
+        { opacity: 0, y: 40 },
         {
-          opacity: 1, filter: "blur(0px)", y: 0, duration: 1, ease: "power2.out",
+          opacity: 1, y: 0, duration: 1, ease: "power2.out",
           scrollTrigger: { trigger: ".about-content", start: "top 80%" },
         }
       );

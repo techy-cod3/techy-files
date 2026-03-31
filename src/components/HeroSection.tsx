@@ -1,8 +1,15 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 
 const HeroSection = () => {
   const sectionRef = useRef<HTMLElement>(null);
+  const [showSpline, setShowSpline] = useState(false);
+
+  // Delay loading the heavy Spline 3D iframe until after preloader finishes
+  useEffect(() => {
+    const timer = setTimeout(() => setShowSpline(true), 4000);
+    return () => clearTimeout(timer);
+  }, []);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -15,8 +22,8 @@ const HeroSection = () => {
       )
         .fromTo(
           ".hero-heading",
-          { opacity: 0, y: 50, filter: "blur(10px)" },
-          { opacity: 1, y: 0, filter: "blur(0px)", duration: 1, ease: "power3.out" },
+          { opacity: 0, y: 50 },
+          { opacity: 1, y: 0, duration: 1, ease: "power3.out" },
           "-=0.3"
         )
         .fromTo(
@@ -53,15 +60,18 @@ const HeroSection = () => {
       id="home"
       className="relative min-h-screen flex items-center overflow-hidden px-0"
     >
-      {/* Spline background */}
-      <div className="hero-spline absolute inset-0 opacity-0 overflow-hidden">
-        <iframe
-          src="https://my.spline.design/orb-L1XqjDs57GUGvfhEVLMSqGF5/"
-          frameBorder="0"
-          className="absolute w-[110vw] h-[110vh] -top-[5vh] -left-[5vw]"
-          style={{ pointerEvents: "none" }}
-          title="3D Background"
-        />
+      {/* Spline background — lazy loaded */}
+      <div className="hero-spline absolute inset-0 opacity-0 overflow-hidden" style={{ willChange: "opacity, transform" }}>
+        {showSpline && (
+          <iframe
+            src="https://my.spline.design/orb-L1XqjDs57GUGvfhEVLMSqGF5/"
+            frameBorder="0"
+            loading="lazy"
+            className="absolute w-[110vw] h-[110vh] -top-[5vh] -left-[5vw]"
+            style={{ pointerEvents: "none" }}
+            title="3D Background"
+          />
+        )}
       </div>
 
       {/* Floating orbs */}

@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import gsap from "gsap";
 
 interface PreloaderProps {
@@ -9,7 +9,6 @@ const Preloader = ({ onComplete }: PreloaderProps) => {
   const preloaderRef = useRef<HTMLDivElement>(null);
   const progressBarRef = useRef<HTMLDivElement>(null);
   const percentRef = useRef<HTMLSpanElement>(null);
-  const [percent, setPercent] = useState(0);
 
   useEffect(() => {
     const tl = gsap.timeline();
@@ -20,8 +19,9 @@ const Preloader = ({ onComplete }: PreloaderProps) => {
       duration: 2.5,
       ease: "power2.out",
       onUpdate: () => {
-        const rounded = Math.round(counter.val);
-        setPercent(rounded);
+        if (percentRef.current) {
+          percentRef.current.textContent = `${Math.round(counter.val)}%`;
+        }
       },
     })
       .to(
@@ -77,12 +77,13 @@ const Preloader = ({ onComplete }: PreloaderProps) => {
             className="h-full w-0 rounded-full"
             style={{
               background: "linear-gradient(90deg, hsl(195 100% 50%), hsl(260 80% 60%))",
+              willChange: "width",
             }}
           />
         </div>
 
         <span ref={percentRef} className="text-muted-foreground text-sm font-light tabular-nums">
-          {percent}%
+          0%
         </span>
       </div>
     </div>
@@ -90,3 +91,4 @@ const Preloader = ({ onComplete }: PreloaderProps) => {
 };
 
 export default Preloader;
+

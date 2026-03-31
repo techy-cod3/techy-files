@@ -11,9 +11,9 @@ const FooterSection = () => {
     const ctx = gsap.context(() => {
       gsap.fromTo(
         ".footer-content",
-        { opacity: 0, y: 60, filter: "blur(6px)" },
+        { opacity: 0, y: 60 },
         {
-          opacity: 1, y: 0, filter: "blur(0px)", duration: 0.8,
+          opacity: 1, y: 0, duration: 0.8,
           scrollTrigger: { trigger: footerRef.current, start: "top 90%" },
         }
       );

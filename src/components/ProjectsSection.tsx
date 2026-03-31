@@ -28,9 +28,9 @@ const ProjectsSection = () => {
     const ctx = gsap.context(() => {
       gsap.fromTo(
         ".projects-heading",
-        { opacity: 0, y: 40, filter: "blur(8px)" },
+        { opacity: 0, y: 40 },
         {
-          opacity: 1, y: 0, filter: "blur(0px)", duration: 1,
+          opacity: 1, y: 0, duration: 1,
           scrollTrigger: { trigger: ".projects-heading", start: "top 85%" },
         }
       );
